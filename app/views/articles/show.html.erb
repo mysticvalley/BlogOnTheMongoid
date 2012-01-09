@@ -14,6 +14,24 @@
   <b>Created At:</b>
   <%= @article.published_on %>
 </p>
+  <%=@article.comments.count %>
+<% if @article.comments.size > 0 %>
+  <h2>Comments</h2>
+
+  <%@article.comments.each do |comment| %>
+    <h3><%= comment.name %></h3>
+    <p><%= comment.content %></p>
+  <% end %>
+<% end %>  
+
+
+<h2>Add New Comment</h2>
+
+<%= form_for [@article, Comment.new] do |f| %>
+  <p><%= f.label :name %> <%= f.text_field :name %></p>
+  <p><%= f.text_area :content, :rows => 10 %></p>
+  <p><%= f.submit %></p>
+<% end %>
 
 
 <%= link_to 'Edit', edit_article_path(@article) %> |

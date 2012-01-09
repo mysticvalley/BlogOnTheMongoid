@@ -1,5 +1,9 @@
 BlogOnTheMongoid::Application.routes.draw do
-  resources :articles
+  devise_for :users
+
+  resources :articles do
+    resources :comments
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
