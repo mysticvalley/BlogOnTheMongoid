@@ -1,0 +1,65 @@
+<div id="container">
+	<div id="header">
+		<div id="header-inside">
+			<div class="title"><h1>Blog On The Mongo</h1></div>
+		<div class="pages">
+
+					<a href="#" title="home" class="custom">Articles</a>
+					<a href="#" title="home" class="custom">Status</a>
+					<a href="#" title="home" class="custom">Links</a>		
+			
+			</div>
+					<div class="des"><h2>Rails . MongoDB</h2></div>
+		
+		</div>
+	</div>
+	<div class="links">
+		<div class="linkimages">
+
+				<a href="/ask" class="ask">{AskLabel}</a>
+
+				<a href="/submit" class="submit">{SubmitLabel}</a>
+
+				<a href="/archive" class="archive">Archive</a>
+				<a href="{RSS}" class="RSS">RSS</a>
+		</div>
+	</div>
+
+
+	<div class="content index">
+		<div id="blocksodd">
+      
+	<%=render :partial=>'posts' ,:locals => { :posts => @articles }%>
+
+		
+	
+		</div>
+
+		<div id="postnotes">
+			<div class="notes">
+
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="navfooter">
+
+			<div class="pagination">
+
+					<a href="{PreviousPage}" class="prev">&laquo;</a>
+
+				<span class="pagecount">page {CurrentPage} of {TotalPages}</span>
+
+					<a href="{NextPage}" class="next">&raquo;</a> 
+
+			</div>
+
+		<div class="by">
+	 <a href="http://zheeer.tumblr.com/">roxxx</a>.
+		</div>
+	</div>
+
+	
+	
+</div>

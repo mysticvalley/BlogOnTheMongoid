@@ -1,7 +1,514 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
+* This is a manifest file that'll automatically include all the stylesheets available in this directory
+* and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+* the top of the compiled file, but it's generally better to create a new file per style scope.
+*= require_self
+*= require_tree . 
 */
+
+body{
+  background:#f4f5f4;
+  margin:0px;
+  font-family:helvetica, arial, tahoma, "sans serif";
+  font-size:12px;
+}
+#header{
+  display:block;
+  width:80%;
+  padding:25px 0px;
+  margin:auto;
+}
+#header-inside{
+}
+div.title{
+}
+div.des{
+  text-align:center;
+  display:block;
+}
+h1{
+  text-transform:lowercase;
+  font-weight:normal;
+  text-align:center;
+  font-size:70px;
+  letter-spacing:4px;
+  color:#fd747e;
+  margin:0px;
+}
+h2{
+  font-size:18px;
+  color:#c8c8c8;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:lowercase;
+  padding:0px;
+  width:100%
+}
+h3, h3 a:link, h3 a:visited{
+  margin:-15px 0px 0px -15px;
+  padding:25px 15px;
+  text-align:left;
+  font-size:25px;
+  font-weight:bold;
+  letter-spacing:-0.05em;
+  text-transform:uppercase;
+  background:#d3d4d3;
+  color:#e2e5e4;
+  display:block;
+  width:100%;
+}
+h3 a:link, h3 a:visited{
+  margin:0px;
+  padding:0px;
+}
+span.quote{
+  font-size:30px;
+  display:block;
+  padding:3px;
+  color#fb353e;
+  letter-spacing:-0.05em;
+}
+div.links{
+  width:50px;
+  text-align:right;
+  margin:auto 0px auto auto;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:100%;
+  background:#e2e5e4;
+}
+div.linkimages{
+  position:absolute;
+  bottom:0px;
+}
+div.linkimages a{
+  display:block;
+  width:50px;
+  height:50px;
+  margin:0px 0px;
+  background:url("http://static.tumblr.com/hbqviai/mC4lehn61/tumblr_01_imgs.png") no-repeat;
+  font-size:0.01% !important;
+}
+a.ask:link, a.ask:visited{
+  background-color:#fcc874;
+  background-position:8px -56px;
+}
+a.ask:hover, a.ask:active{
+  background-color:#f99d35;
+}
+a.submit:link, a.submit:visited{
+  background-color:#fd747e;
+  background-position:-72px -56px;
+}
+a.submit:hover, a.submit:active{
+  background-color:#fb353e;
+}
+a.archive:link, a.archive:visited{
+  background-color:#6f4181;
+  background-position:-152px -56px;
+}
+a.archive:hover, a.archive:active{
+  background-color:#301141;
+}
+a.RSS:link, a.RSS:visited{
+  background-color:#77bdee;
+  background-position:-232px -56px;
+}
+a.RSS:hover, a.RSS:active{
+  background-color:#388cde;
+}
+.pages a.custom:link, .pages a.custom:visited{
+  color:#262729;
+  font-weight:bold;
+  font-size:15px;
+  letter-spacing:-0.05em;
+}
+.pages a.custom:hover, .pages a.custom:active{
+  letter-spacing:.02em;
+  color:#fd747e;
+}
+a:link, a:visited{
+  text-decoration:none;
+  color:#fff;
+  font-weight:normal;
+}
+a:hover, a:active{
+  color:#77bdee;
+}
+.answer a:link, .answer a:visited{
+  color:#f99d35;
+}
+.answer a:hover, .answer a:active{
+  border-bottom:dashed 1px #f99d35;
+}
+.chat a:link, .chat a:visited{
+  color:#262729;
+}
+.chat a:hover, .chat a:active{
+  border-bottom:dashed 1px #262729;
+}
+.link a:link, .link a:visited{
+  color:#388cde;
+  
+}
+.link a:hover, .link a:active{
+ color:#388cde;
+}
+.text a:link, .text a:visited{
+  color:#fcc874;
+}
+.text a:hover, .text a:active{
+  border-bottom:dashed 1px #fcc874;
+}
+.quote a:link, .quote a:visited{
+  color:#fb353e;
+}
+.quote a:hover, .quote a:active{
+  border-bottom:dashed 1px #fb353e;
+}
+.photo a:link, .photo a:visited{
+  color:#6f4181;
+}
+.photo a:hover, .photo a:active{
+  border-bottom:dashed 1px #6f4181;
+}
+.photoset a:link, .photoset a:visited{
+  color:#301141;
+}
+.photoset a:hover, .photoset a:active{
+  border-bottom:dashed 1px #301141;
+}
+.audio a:link, .audio a:visited{
+  color:#fd747e;
+}
+.audio a:hover, .audio a:active{
+  border-bottom:dashed 1px #fd747e;
+}
+.video a:link, .video a:visited{
+  color:#77bdee;
+}
+.video a:hover, .video a:active{
+  border-bottom:dashed 1px #77bdee;
+}
+.post{
+  background:#f00;
+  margin:30px auto;
+  color:#999;
+  padding-left:60px;
+  min-height:130px;
+}
+.clear{
+  clear:both;
+}
+
+.photo .post-content2, .video .post-content2, .photoset post-content2, .audio .post-content2{
+  width:400px;
+}
+.post-content{
+  background:#e8eae9;
+  padding:15px;
+}
+.post-inner{
+  padding:15px;
+}
+.post img{
+  max-width:400px;
+}
+.pre-post{
+  width:54px;
+  float:left;
+  margin-left:-60px;
+  padding:3px;
+}
+.pre-post .notes, .pre-post .date, .pre-post .time{
+  display:block;
+}
+.pre-post .date{
+  text-align:center;
+}
+.pre-post .date a:link, .pre-post .date a:visited{
+  font-size:35px;
+  font-weight:bold;
+  line-height:30px;
+}
+.answer .pre-post .notes, .answer .pre-post .time{
+  color:#faba71;
+}
+.answer .pre-post .date a:link, .answer .pre-post .date a:visited{
+  color:#faba71;
+}
+.answer .pre-post .date a:hover, .answer .pre-post .date a:active{
+  color:#c77d2a;
+}
+.chat .pre-post .notes, .chat .pre-post .time{
+  color:#666768;
+}
+.chat .pre-post .date a:link, .chat .pre-post .date a:visited{
+  color:#666768;
+}
+.chat .pre-post .date a:hover, .chat .pre-post .date a:active{
+  color:#1e1f20;
+}
+.link .pre-post .notes, .link .pre-post .time{
+  color:#73aee7;
+}
+.link .pre-post .date a:link, .link .pre-post .date a:visited{
+  color:#73aee7;
+}
+.link .pre-post .date a:hover, .link .pre-post .date a:active{
+  color:#2c70b1;
+}
+.text .pre-post .notes, .text .pre-post .time{
+  color:#fcd89d;
+}
+.text .pre-post .date a:link, .text .pre-post .date a:visited{
+  color:#fcd89d;
+}
+.text .pre-post .date a:hover, .text .pre-post .date a:active{
+  color:#c9a05c;
+}
+.quote .pre-post .notes, .quote .pre-post .time{
+  color:#fc7177;
+}
+.quote .pre-post .date a:link, .quote .pre-post .date a:visited{
+  color:#fc7177;
+}
+.quote .pre-post .date a:hover, .quote .pre-post .date a:active{
+  color:#c82a31;
+}
+.photo .pre-post .notes, .photo .pre-post .time{
+  color:#9979a6;
+}
+.photo .pre-post .date a:link, .photo .pre-post .date a:visited{
+  color:#9979a6;
+}
+.photo .pre-post .date a:hover, .photo .pre-post .date a:active{
+  color:#583467;
+}
+.photoset .pre-post .notes, .photoset .pre-post .time{
+  color:#6d5779;
+}
+.photoset .pre-post .date a:link, .photoset .pre-post .date a:visited{
+  color:#6d5779;
+}
+.photoset .pre-post .date a:hover, .photoset .pre-post .date a:active{
+  color:#260d34;
+}
+.audio .pre-post .notes, .audio .pre-post .time{
+  color:#fd9da4;
+}
+.audio .pre-post .date a:link, .audio .pre-post .date a:visited{
+  color:#fd9da4;
+}
+.audio .pre-post .date a:hover, .audio .pre-post .date a:active{
+  color:#ca5c64;
+}
+.video .pre-post .notes, .video .pre-post .time{
+  color:#9fd0f3;
+}
+.video .pre-post .date a:link, .video .pre-post .date a:visited{
+  color:#9fd0f3;
+}
+.video .pre-post .date a:hover, .video .pre-post .date a:active{
+  color:#5f97be;
+}
+.pre-post .time{
+  font-size:12px;
+}
+.pre-post .notes{
+  font-size:16px;
+}
+.audio .post-inner{
+  padding:0px;
+}
+.audio img.albumart{
+  margin-bottom:-60px;
+}
+.audio-info{
+  padding:10px;
+  margin:0px;
+  background:rgba(0,0,0,.5);
+  color:#fff;
+  position:relative;
+  height:40px;
+}
+.audio-inner{
+  display:block;
+}
+.audio-player{
+  margin-top:0px;
+  width:100%;
+  background:#000;
+}
+.audio-player embed{
+  text-align:left;
+}
+.content{
+  margin:auto auto 30px 40px;
+}
+#blocksodd{
+  width:42%;
+  float:left;
+  margin:auto 0px 0px 6%;
+}
+#blockseven{
+  width:42%;
+  float:right;
+  margin:auto 6% 0px 0px;
+}
+div.text{
+  background:#fcc874;
+}
+div.audio{
+  background:#fd747e;
+}
+div.photo{
+  background:#6f4181;
+}
+div.video{
+  background:#77bdee;
+}
+div.chat{
+  background:#262729;
+}
+div.answer{
+  background:#f99d35;
+}
+div.quote{
+  background:#fb353e;
+}
+div.photoset{
+  background:#301141;
+}
+div.link{
+  background:#388cde;
+}
+.chatline{
+  display:block;
+  padding:3px;
+}
+.even{
+  background:#d7dad9;
+}
+.odd{
+  background:#eaecec;
+}
+.even .label, .odd .label{
+  font-weight:bold;
+  font-size:13px;
+  text-transform:lowercase;
+}
+div.tags{
+  padding:10px 15px;
+  width:100%;
+  margin:0px 0px -15px -15px;
+  background:#d3d4d3 url("http://static.tumblr.com/hbqviai/mC4lehn61/tumblr_01_imgs.png") no-repeat -305px -54px;
+  text-align:left;
+}
+.tags p{
+  margin:0px 0px 0px 30px;
+}
+a.tag{
+  margin:0px 5px;
+}
+a.tag:link, a.tag:visited{
+  color:#fff;
+}
+a.tag:hover, a.tag:active{
+  color:#262729;
+  border:0px;
+}
+a.high-res{
+  width:40px;
+  height:40px;
+  background:url("http://static.tumblr.com/hbqviai/mC4lehn61/tumblr_01_imgs.png") no-repeat 4px 4px;
+  font-size:0.01%;
+  display:block;
+  position:relative;
+  margin-top:-50px;
+  margin-right:10px;
+  border:0px !Important;
+  float:right;
+}
+a.high-res:link, a.high-res:visited{
+  background-color:#000;
+  opacity:0.4;
+  filter:alpha(opacity=40);
+}
+a.high-res:hover, a.high-res:active{
+  background-color:#d3d4d3;
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+#postnotes{
+  width:42%;
+  float:right;
+  margin:30px 6% 30px 0px;
+}
+#postnotes a img{
+  display:none;
+}
+ol.notes a:link, ol.notes a:visited{
+  color:#262729;
+}
+ol.notes a:hover, ol.notes a:active{
+  color:#d3d4d3;
+  font-style:italic;
+}
+ol.notes li.note{
+  background:#e8eae9;
+  color:#999;
+  list-style:none;
+  padding:3px;
+  margin:5px 0px;
+}
+ol.notes blockquote{
+  width:80%;
+  margin:5px auto;
+}
+.post-content{
+  overflow:hidden;
+}
+.post-inner blockquote{
+  border-left:solid 2px #d3d4d3;
+  padding:4px;
+  width:100%;
+  margin:0px 0px 5px 10px;
+}
+.post-inner blockquote p{
+  background:transparent;
+  border:0px;
+  padding:0px;
+  margin:0px;
+  width:100%;
+}
+#navfooter{
+  clear:both;
+  background:#262729;
+  color:#666768;
+  margin:0px 0px 0px 50px;
+  padding:10px;
+  font-size:12px;
+  text-transform:uppercase;
+  text-align:center;
+}
+#navfooter .prev, #navfooter .next{
+  font-size:25px;
+  margin:0px 15px;
+}
+#navfooter .by{
+  margin:10px 0px;
+  text-transform:lowercase;
+}
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  padding:4px !important;
+  background: none repeat scroll 0 0 #CCE5FC;
+  border: 1px solid #CCE5FC !important;
+  box-shadow: 1px 1px 0 #666666, 2px 2px 0 #666666, 3px 3px 0 #666666;
+}

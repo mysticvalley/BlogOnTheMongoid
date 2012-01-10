@@ -7,3 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  $("pre").addClass('prettyprint');
+  prettyPrint();
+});

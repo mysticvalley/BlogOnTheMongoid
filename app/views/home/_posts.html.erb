@@ -1,0 +1,39 @@
+<% posts.each do |post| %>
+
+<div class="post link">
+  
+  <div class="pre-post">
+
+    <span class="date">
+      <a href="{Permalink}">
+        <span class="month"><%= post.created_at.month %>.</span> 
+        <span class="day"><%= post.created_at.day %>.</span>
+        <span class="year"><%= post.created_at.strftime('%y') %>.</span>
+      </a>
+    </span>
+    
+    <span class="time"><%= post.created_at.strftime('%I:%M|%p')%></span>
+
+    <span class="notes">&hearts; <%=post.comments.count %></span>
+  </div>
+  
+  <div class="post-content">
+    
+    <h3><a href="{URL}" target="_blank" class="favorite-link"><%=post.title %></a></h3>
+
+    <div class="post-inner">
+      <%=post.content %>
+    </div>
+
+    <div class="tags">
+      <p>
+        <a href="{TagURLChrono}" class="tag">{Tag}</a>
+      </p>
+    </div>
+
+    <div class="clear"> </div>
+  </div>
+  
+</div>
+
+<% end %>

@@ -5,7 +5,6 @@ class Article
   
   field :title, :type => String
   field :content, :type => String
-  field :published_on, :type => DateTime
 
   validates_presence_of :title,:content
   
