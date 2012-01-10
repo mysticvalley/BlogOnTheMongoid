@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+
     @article = Article.find(params[:id])
 
     respond_to do |format|
@@ -41,7 +42,6 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-    @article.published_on = Time.now
 
     respond_to do |format|
       if @article.save

@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'devise'
+gem 'slugoid'
 
 
 # Gems used only for assets and not required
